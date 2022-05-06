@@ -1,0 +1,22 @@
+PATHS:
+  RAW_DATA: 'C:/Users/akesar/Desktop/CollegeProject/covid-cxr/data/'                                       # Path containing all 3 raw datasets (Mila, Figure 1, RSNA)
+  MILA_DATA: 'C:/Users/akesar/Desktop/CollegeProject/covid-cxr/data/covid-chestxray-dataset/'              # Path of Mila dataset https://github.com/ieee8023/covid-chestxray-dataset
+  FIGURE1_DATA: 'C:/Users/akesar/Desktop/CollegeProject/covid-cxr/data/Figure1-COVID-chestxray-dataset/'   # Path of Figure 1 dataset https://github.com/agchung/Figure1-COVID-chestxray-dataset
+  RSNA_DATA: 'C:/Users/akesar/Desktop/CollegeProject/covid-cxr/data/rsna-pneumonia-detection-challenge/'                                 # Path of RSNA dataset https://www.kaggle.com/c/rsna-pneumonia-detection-challenge
+  PROCESSED_DATA: 'data/processed/'
+  TRAIN_SET: 'data/processed/train_set.csv'
+  VAL_SET: 'data/processed/val_set.csv'
+  TEST_SET: 'data/processed/test_set.csv'
+
+DATA:
+  IMG_DIM: [224, 224]
+  VIEWS: ['PA', 'AP']
+  VAL_SPLIT: 0.08
+  TEST_SPLIT: 0.1
+  NUM_RSNA_IMGS: 1000
+  # CLASSES: ['non-COVID-19', 'COVID-19']                   # Classes for binary classification
+  CLASSES: ['normal', 'COVID-19', 'other_pneumonia']     # Classes for multiclass classification (3 classes)
+
+TRAIN:
+  CLASS_MODE: 'multiclass'                                    # One of {'binary', 'multiclass'}
+  
